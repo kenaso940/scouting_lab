@@ -14,3 +14,15 @@ class Player(PlayerBase):
     passing: int
     physical: int
     defending: int
+    position: str
+    distance: int
+
+
+class PlayerOut(BaseModel):
+    player_name: str
+    player_age: int
+
+
+class similarPlayerOut(BaseModel):
+    player_name: str
+    distance: int

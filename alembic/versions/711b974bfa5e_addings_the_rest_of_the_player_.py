@@ -25,9 +25,6 @@ def upgrade() -> None:
     op.add_column('players', sa.Column('passing', sa.Integer(), nullable=False))
     op.add_column('players', sa.Column('physical', sa.Integer(), nullable=False))
     op.add_column('players', sa.Column('defending', sa.Integer(), nullable=False))
-    
-    
-
 
 def downgrade() -> None:
     op.drop_column("players", 'pace')

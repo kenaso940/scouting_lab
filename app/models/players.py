@@ -16,3 +16,7 @@ class Players(Base):
     passing = Column(Integer, nullable=False)
     defending = Column(Integer, nullable=False)
     physical = Column(Integer, nullable=False)
+    position = Column(String, nullable=False)
+
+
+
