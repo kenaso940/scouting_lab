@@ -1,7 +1,4 @@
-from pydantic import BaseModel, EmailStr
-from datetime import datetime
-from typing import Optional
-from pydantic.types import conint
+from pydantic import BaseModel, ConfigDict
 
 class PlayerBase (BaseModel):
     player_name: str
@@ -15,7 +12,8 @@ class Player(PlayerBase):
     physical: int
     defending: int
     position: str
-    distance: int
+    distance: float
+    league: str
 
 
 class PlayerOut(BaseModel):
@@ -24,5 +22,8 @@ class PlayerOut(BaseModel):
 
 
 class similarPlayerOut(BaseModel):
-    player_name: str
-    distance: int
+    name: str
+    position: str
+    league: str
+    similarity: float
+    model_config = ConfigDict(from_attributes=True)
