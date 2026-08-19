@@ -70,6 +70,7 @@ def test_players_are_sorted_by_distance():
     response = client.get(
         "/players/Salah/similar?k=5&position=RW"
     )
+    assert response.status_code == 200
 
     players = response.json()
 
