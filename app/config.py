@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     database_password: str = ""
     database_name: str = "scouting_lab"
     database_username: str = "postgres"
+    api_football_key: str = ""
 
     model_config = SettingsConfigDict(env_file=".env")
 
